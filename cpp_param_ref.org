@@ -119,10 +119,10 @@ Provide two overloads; for callers wanting to
 void SetTitle(std::string&& title) {       // for relinquishers
   m_title = std::move(title);              // cheap move
 }
-
 void SetTitle(const std::string& title) {  // for retainers
   m_title = title;                         // expensive deep copy
 }
+
 SetTitle(std::move(page_title));    // page_title empty
 SetTitle(doc_title);                // doc_title valid
 #+END_SRC
@@ -194,14 +194,13 @@ Returning value (both move and copy) will lead to deep copy for [[https://stacko
 
 #+BEGIN_SRC c++
 // example
+void Deduce(Properties& p) { /* read-write p */ }
 // a move-unfriendly type (has no freestore data members)
 struct Properties {
   Point                  origin;
   float                  size_x, size_y;
   std::array<Margin, 4>  margin_sizes;
 };
-void Deduce(Properties& p) {
-}
 #+END_SRC
 
 * ~Out~ Object Reference
