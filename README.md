@@ -68,3 +68,8 @@ Append this to your Emacs configuration
 
 * Add horizontal rules between sections
 * Use _mononoki_ font for monospace using `fontspec` package
+
+# See Also
+
+* [LaTeX cheetsheet template](https://wch.github.io/latexsheet/) used to prepare [Math Cheatsheet](https://antongerdelan.net/teaching/3dprog1/maths_cheat_sheet.pdf) by Anton Gerdelan
+  - [Preparing Cheatsheets - TeX.SE Post](https://tex.stackexchange.com/questions/8827/preparing-cheat-sheets)
